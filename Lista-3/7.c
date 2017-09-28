@@ -7,8 +7,8 @@
 
 int main()
 {
-    int nAlunos = 10, nAlunosMaiorDoQueMedia, i;
-    float notas[nAlunos], notasTotal, mediaTurma;
+    int nAlunos = 10, nAlunosMaiorDoQueMedia = 0, i;
+    float notas[nAlunos], notasTotal = 0, mediaTurma = 0;
 
     for (i = 0; i < nAlunos; i++)
     {
