@@ -8,18 +8,25 @@
 int main()
 {
     int vetorTmn = 10;
-    int meuVetor[vetorTmn], i, oMaior, oMenor;
+    int meuVetor[vetorTmn], i, oMaior, oMenor, init = 0;
 
     for (i = 0; i < vetorTmn; i++)
     {
         printf("Vetor[%d] valor: ", i);
         scanf("%d", &meuVetor[i]);
-        if (!oMaior || oMaior < meuVetor[i])
+        if(!init) {
+            init = 1;
+            oMaior = meuVetor[i];
+            oMenor = meuVetor[i];
+            continue;
+        }
+
+        if (oMaior < meuVetor[i])
         {
             oMaior = meuVetor[i];
         }
 
-        if (!oMenor || oMenor > meuVetor[i])
+        if (oMenor > meuVetor[i])
         {
             oMenor = meuVetor[i];
         }
